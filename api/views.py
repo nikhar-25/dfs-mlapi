@@ -11,6 +11,7 @@ with open('models/SVMClassifier.pkl', 'rb') as model_file:
 
 @api_view(['GET'])
 def health_check(request):
+    print('Checking health, request received successfully')
     return Response({'status': 200, 'message': "Success"})
 
 @api_view(['POST'])
